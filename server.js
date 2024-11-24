@@ -3,12 +3,9 @@ import conectarAoBanco from "./src/config/dbconfig.js";
 import routes from "./src/routes/postsroutes.js";
 
 const app = express();
+app.use(express.static("uploads"))
 routes(app);
 
-app.listen(3000, () =>{
+app.listen(3001, () =>{
     console.log("Servidor escutando...");
 });
-
-
-
-
